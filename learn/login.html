@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("sunkova-academy-theme");
+        var theme = stored === "light" || stored === "dark"
+          ? stored
+          : (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Sign in — Sunkova Academy Learn</title>
+  <meta name="description" content="Sign in to Sunkova Academy to continue your courses." />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="learn.css" />
+  <link rel="icon" href="../assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png" />
+</head>
+<body class="lx" data-page="login">
+  <a class="sr-only" href="#main">Skip to content</a>
+  <header class="lx-header" id="lx-header"></header>
+  <main id="main" class="lx-main">
+    <section class="lx-login">
+      <div class="lx-login-bg" aria-hidden="true"><div class="hero-bg"></div><div class="hero-grid"></div><div class="hero-noise"></div></div>
+      <div class="lx-login-grid">
+        <div class="lx-login-copy">
+          <p class="micro">Sunkova Academy · Learn</p>
+          <h1 class="lx-h1 lx-login-title">Build something <span class="serif">every module.</span></h1>
+          <p class="lead">Watch, learn, check, then ship a challenge for your portfolio. Your progress follows you through each course.</p>
+          <ul class="lx-login-steps" aria-label="How each module works">
+            <li><span class="mono">01</span>Watch</li><li><span class="mono">02</span>Learn</li><li><span class="mono">03</span>Check</li><li><span class="mono">04</span>Challenge</li><li><span class="mono">05</span>Reflect</li>
+          </ul>
+        </div>
+        <form class="lx-login-card" id="lx-login" novalidate>
+          <div>
+            <p class="micro">Sign in</p>
+            <h2 class="lx-h2">Welcome back</h2>
+          </div>
+          <div class="form-row"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required /></div>
+          <div class="form-row"><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" /></div>
+          <button class="btn btn-solid lx-block-btn" type="submit">Sign in</button>
+          <div class="lx-or"><span>or</span></div>
+          <button class="btn lx-block-btn" type="button" id="lx-demo">Continue as demo learner</button>
+          <p class="lx-note">Demo only: any email works, no password is checked, and nothing leaves this browser. Not enrolled yet? <a class="lx-link" href="../courses.html">Browse courses</a> or <a class="lx-link" href="../contact.html">join the waitlist</a>.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="lx-footer"><div class="lx-wrap"><span>© Sunkova Academy · Learn (demo)</span><a href="../index.html">Academy site</a><a href="mailto:hello@sunkova.com">hello@sunkova.com</a></div></footer>
+  <script src="learn.js"></script>
+</body>
+</html>

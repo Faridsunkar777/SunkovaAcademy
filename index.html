@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" data-depth="0">
+<head>
+  <script>
+    (function () {
+      try {
+        var key = "sunkova-academy-theme";
+        var stored = localStorage.getItem(key);
+        var theme = stored === "light" || stored === "dark"
+          ? stored
+          : (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sunkova Academy — Learn to ship in the AI era</title>
+  <meta name="description" content="Challenge-based courses for career switchers and beginners. Live cohorts and self-paced courses from Sunkova." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
+</head>
+<body>
+  <a class="sr-only" href="#main">Skip to content</a>
+  <header class="site-header" id="site-header"></header>
+  <main id="main">
+
+    <section class="hero hero-product">
+      <div class="hero-bg" data-parallax="6"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-noise"></div>
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="micro">Sunkova Academy</span>
+            <span class="rule"></span>
+            <span class="mono">01</span>
+          </div>
+          <h1 class="display">
+            Learn to
+            <span class="block muted">ship in the</span>
+            <span class="serif">AI era.</span>
+          </h1>
+          <p class="lead hero-lead">Challenge-based courses for career switchers and beginners.</p>
+          <div class="hero-actions">
+            <a class="cta" href="courses.html">
+              <span class="cta-circle"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+              <span class="cta-copy">
+                <span class="title">Explore courses</span>
+              </span>
+            </a>
+            <a class="btn btn-solid" href="contact.html">Apply / enrol</a>
+          </div>
+        </div>
+        <div class="hero-stage" data-reveal>
+          <div class="hero-frame hero-frame-main" data-parallax="-4">
+            <img src="assets/images/hero.webp" alt="Abstract futuristic 3D render" width="1400" height="1064" />
+            <div class="hero-frame-glow"></div>
+          </div>
+          <div class="hero-float hero-float-device" data-parallax="10">
+            <img src="assets/images/hero-device.webp" alt="Smartphone product shot" width="1200" height="800" />
+          </div>
+          <div class="hero-float hero-float-vr" data-parallax="14">
+            <img src="assets/images/hero-vr.webp" alt="Immersive headset" width="900" height="900" />
+          </div>
+          <aside class="hero-side">
+            <div class="hero-side-top">
+              <span class="micro">Academy / Founding</span>
+              <span class="mono">05 / 05</span>
+            </div>
+            <div class="progress-line"><span></span></div>
+            <div class="stat-grid">
+              <div class="stat"><strong>05</strong><span>Categories</span></div>
+              <div class="stat"><strong>15+</strong><span>Courses</span></div>
+              <div class="stat"><strong>CBL</strong><span>Challenge-based</span></div>
+              <div class="stat"><strong>KE</strong><span>Built in Nairobi</span></div>
+            </div>
+            <p class="hero-side-note">Sister to the Sunkova studio — same craft bar.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee-strip" aria-hidden="true">
+      <div class="marquee-track">
+        <span>AI Design</span><span>·</span><span>Mobile Applications</span><span>·</span>
+        <span>AI Security</span><span>·</span><span>AI Engineering</span><span>·</span>
+        <span>3-D Animation</span><span>·</span>
+        <span>AI Design</span><span>·</span><span>Mobile Applications</span><span>·</span>
+        <span>AI Security</span><span>·</span><span>AI Engineering</span><span>·</span>
+        <span>3-D Animation</span><span>·</span>
+      </div>
+    </section>
+
+    <section class="section tracks-cinematic" id="categories">
+      <div class="container">
+        <div class="section-head row" data-reveal>
+          <div>
+            <div class="eyebrow"><span class="micro">Courses</span><span class="rule"></span><span class="mono">02</span></div>
+            <h2 class="section-title">Five categories.<br /><span class="serif" style="font-family:var(--font-serif);font-style:italic;font-weight:400">One standard:</span> ship.</h2>
+          </div>
+          <p class="lead">Each category ships portfolio artefacts you can show employers and clients.</p>
+        </div>
+      </div>
+
+      <div class="tracks-index" data-reveal-stagger>
+
+        <a class="track-row" href="courses/ai-design.html">
+          <figure class="track-row-media">
+            <img src="assets/images/track-ai-design.webp" alt="" loading="lazy" width="1400" height="900" />
+          </figure>
+          <div class="track-row-body">
+            <span class="track-num">01</span>
+            <div class="track-row-main">
+              <div class="track-row-kicker">
+                <span class="mono">8 weeks · Live &amp; self-paced · Designers, PMs, founders</span>
+              </div>
+              <h3>AI Design</h3>
+              <p>Design AI products people understand, trust, and actually use — from opportunity framing to live prototypes.</p>
+            </div>
+            <span class="track-row-cta">Explore courses <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+          </div>
+        </a>
+
+        <a class="track-row" href="courses/mobile-applications.html">
+          <figure class="track-row-media">
+            <img src="assets/images/track-mobile.webp" alt="" loading="lazy" width="1400" height="900" />
+          </figure>
+          <div class="track-row-body">
+            <span class="track-num">02</span>
+            <div class="track-row-main">
+              <div class="track-row-kicker">
+                <span class="mono">12 weeks · Live cohort · Career switchers</span>
+              </div>
+              <h3>Mobile Applications</h3>
+              <p>Build and publish mobile apps that work on real Kenyan phones — Flutter, M-Pesa, offline-first, and AI features.</p>
+            </div>
+            <span class="track-row-cta">Explore courses <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+          </div>
+        </a>
+
+        <a class="track-row" href="courses/ai-security.html">
+          <figure class="track-row-media">
+            <img src="assets/images/track-ai-security.webp" alt="" loading="lazy" width="1400" height="900" />
+          </figure>
+          <div class="track-row-body">
+            <span class="track-num">03</span>
+            <div class="track-row-main">
+              <div class="track-row-kicker">
+                <span class="mono">8 weeks · Live &amp; self-paced · Developers &amp; IT</span>
+              </div>
+              <h3>AI Security</h3>
+              <p>Find weaknesses in AI applications before attackers do — threat modelling, red teaming, and hardening.</p>
+            </div>
+            <span class="track-row-cta">Explore courses <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+          </div>
+        </a>
+
+        <a class="track-row" href="courses/ai-engineering.html">
+          <figure class="track-row-media">
+            <img src="assets/images/track-ai-engineering.webp" alt="" loading="lazy" width="1400" height="900" />
+          </figure>
+          <div class="track-row-body">
+            <span class="track-num">04</span>
+            <div class="track-row-main">
+              <div class="track-row-kicker">
+                <span class="mono">6–8 weeks · Live &amp; self-paced · Professionals</span>
+              </div>
+              <h3>AI Engineering</h3>
+              <p>From prompts to grounded assistants and agents — practical AI building for beginners who want portfolio artefacts.</p>
+            </div>
+            <span class="track-row-cta">Explore courses <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+          </div>
+        </a>
+
+        <a class="track-row" href="courses/3d-animation.html">
+          <figure class="track-row-media">
+            <img src="assets/images/track-3d-animation.webp" alt="" loading="lazy" width="1400" height="900" />
+          </figure>
+          <div class="track-row-body">
+            <span class="track-num">05</span>
+            <div class="track-row-main">
+              <div class="track-row-kicker">
+                <span class="mono">6–10 weeks · Live cohort · Creatives</span>
+              </div>
+              <h3>3-D Animation</h3>
+              <p>Motion and 3D for digital storytelling — from cinematic fundamentals to realtime scenes and spatial prototypes.</p>
+            </div>
+            <span class="track-row-cta">Explore courses <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <section class="section section-tight media-break" id="studio-break">
+      <div class="container">
+        <div class="section-head" data-reveal style="margin-bottom:2rem">
+          <div class="eyebrow"><span class="micro">Studio</span><span class="rule"></span><span class="mono">Break</span></div>
+          <h2 class="section-title" style="font-size:clamp(1.75rem,3.5vw,2.75rem)">Craft you can feel.</h2>
+        </div>
+        <div class="bento" data-reveal-stagger>
+          <figure class="bento-cell bento-wide">
+            <img src="assets/images/editorial-neon.webp" alt="Neon dark studio" loading="lazy" />
+            <figcaption>
+              <span class="micro micro-light">Studio energy</span>
+              <strong>Product craft meets education.</strong>
+            </figcaption>
+          </figure>
+          <figure class="bento-cell">
+            <img src="assets/images/bento-headset.webp" alt="VR headset" loading="lazy" />
+            <figcaption><span class="micro">Spatial</span><strong>Immersive builds</strong></figcaption>
+          </figure>
+          <figure class="bento-cell">
+            <img src="assets/images/bento-code.webp" alt="Code on screen" loading="lazy" />
+            <figcaption><span class="micro">Ship</span><strong>Real artefacts</strong></figcaption>
+          </figure>
+          <figure class="bento-cell bento-tall">
+            <img src="assets/images/bento-abstract.webp" alt="Abstract AI glow" loading="lazy" />
+            <figcaption><span class="micro">AI era</span><strong>Interfaces that feel alive</strong></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight section-ink" id="formats">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div class="eyebrow"><span class="micro">Formats</span><span class="rule"></span><span class="mono">03</span></div>
+          <h2 class="section-title">Live energy.<br />Self-paced depth.</h2>
+        </div>
+        <div class="format-grid format-media" data-reveal-stagger>
+          <article class="format-card featured format-with-media">
+            <div class="format-thumb"><img src="assets/images/editorial-cohort.webp" alt="" loading="lazy" /></div>
+            <div class="format-body">
+              <span class="pill"><span class="pill-dot"></span>Live cohorts</span>
+              <h3>Show &amp; Ship weeks</h3>
+              <p class="lead" style="max-width:none">Challenge Drops on Mondays, facilitated labs, peer reviews, and Friday demos — with real client briefs when possible.</p>
+              <ul>
+                <li>Scheduled live sessions + async challenge work</li>
+                <li>Demo Days with mentors and invited guests</li>
+                <li>Team leaderboards and skill badges</li>
+                <li>Best for accountability and career switchers</li>
+              </ul>
+            </div>
+          </article>
+          <article class="format-card format-with-media" data-accent="orange">
+            <div class="format-thumb"><img src="assets/images/editorial-studio.webp" alt="" loading="lazy" /></div>
+            <div class="format-body">
+              <span class="pill pill-orange"><span class="pill-dot"></span>Self-paced</span>
+              <h3>Build on your clock</h3>
+              <p class="lead" style="max-width:none">Structured modules, rubrics, and portfolio prompts you can complete around work or campus — same craft bar, flexible pace.</p>
+              <ul>
+                <li>Modular lessons and challenge briefs</li>
+                <li>Same artefact standards as live cohorts</li>
+                <li>Optional mentor office hours (when open)</li>
+                <li>Ideal for busy professionals starting out</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="featured">
+      <div class="container">
+        <div class="section-head row" data-reveal>
+          <div>
+            <div class="eyebrow"><span class="micro">Featured</span><span class="rule"></span><span class="mono">04</span></div>
+            <h2 class="section-title">Courses to start with.</h2>
+          </div>
+          <p class="lead">Real blurbs from the founding curriculum — live and self-paced. Pricing TBD.</p>
+        </div>
+      </div>
+      <div class="course-index" data-reveal-stagger>
+        <a class="course-row" href="courses.html?category=ai-design">
+          <span class="course-row-num">01</span>
+          <figure class="course-row-media"><img src="assets/images/course-ai-product.webp" alt="" loading="lazy" /></figure>
+          <div class="course-row-copy">
+            <div class="course-row-meta"><span class="mono">AI Design</span><span class="mono">8 weeks · Live</span><span class="mono">Pricing TBD</span></div>
+            <h3>AI Product Design Foundations</h3>
+            <p>Design for probabilistic systems — research, opportunity framing, and trust UX for East African users.</p>
+          </div>
+          <span class="course-row-arrow" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </a>
+        <a class="course-row" href="courses.html?category=mobile-applications">
+          <span class="course-row-num">02</span>
+          <figure class="course-row-media"><img src="assets/images/course-flutter.webp" alt="" loading="lazy" /></figure>
+          <div class="course-row-copy">
+            <div class="course-row-meta"><span class="mono">Mobile Applications</span><span class="mono">6 weeks · Live</span><span class="mono">Pricing TBD</span></div>
+            <h3>Flutter Foundations: Hello Mtaa</h3>
+            <p>Ship your first multi-screen Flutter app tuned for low-end Android and Kenyan user contexts.</p>
+          </div>
+          <span class="course-row-arrow" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </a>
+        <a class="course-row" href="courses.html?category=ai-security">
+          <span class="course-row-num">03</span>
+          <figure class="course-row-media"><img src="assets/images/course-threat.webp" alt="" loading="lazy" /></figure>
+          <div class="course-row-copy">
+            <div class="course-row-meta"><span class="mono">AI Security</span><span class="mono">4 weeks · Self-paced</span><span class="mono">Pricing TBD</span></div>
+            <h3>AI Threat Modelling Essentials</h3>
+            <p>Map LLM apps with OWASP LLM Top 10 and MITRE ATLAS — threat models you can present to leadership.</p>
+          </div>
+          <span class="course-row-arrow" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </a>
+        <a class="course-row" href="courses.html?category=ai-engineering">
+          <span class="course-row-num">04</span>
+          <figure class="course-row-media"><img src="assets/images/course-prompt.webp" alt="" loading="lazy" /></figure>
+          <div class="course-row-copy">
+            <div class="course-row-meta"><span class="mono">AI Engineering</span><span class="mono">6 weeks · Live</span><span class="mono">Pricing TBD</span></div>
+            <h3>Prompt Engineering Essentials</h3>
+            <p>Structured prompts, evaluation, multimodal workflows — no coding required to start shipping AI assistants.</p>
+          </div>
+          <span class="course-row-arrow" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </a>
+      </div>
+      <div class="container" style="margin-top:2.5rem" data-reveal>
+        <a class="btn" href="courses.html">View full catalogue</a>
+      </div>
+    </section>
+
+    <section class="section section-tight editorial-photo" id="editorial">
+      <div class="editorial-full" data-reveal>
+        <img src="assets/images/page-courses.webp" alt="Earth from space — global craft" loading="lazy" />
+        <div class="editorial-overlay">
+          <div class="container">
+            <span class="micro micro-light">Africa-rooted · Globally fluent</span>
+            <h2 class="section-title">Built in Nairobi.<br /><span class="serif" style="font-family:var(--font-serif);font-style:italic;font-weight:400">Shipped worldwide.</span></h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight section-ink" id="how">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div class="eyebrow"><span class="micro">Method</span><span class="rule"></span><span class="mono">05</span></div>
+          <h2 class="section-title">How it works.</h2>
+          <p class="lead">Engage, investigate, act, reflect — lectures alone won't get you hired.</p>
+        </div>
+        <div class="steps" data-reveal-stagger>
+          <div class="step">
+            <span class="step-num">01</span>
+            <h3>Pick a category</h3>
+            <p>Choose AI Design, Mobile, Security, Engineering, or 3-D — or start with a short self-paced course.</p>
+          </div>
+          <div class="step">
+            <span class="step-num">02</span>
+            <h3>Take the challenge</h3>
+            <p>Each module opens with a Big Idea and a concrete brief. You investigate, then build.</p>
+          </div>
+          <div class="step">
+            <span class="step-num">03</span>
+            <h3>Show &amp; ship</h3>
+            <p>Present artefacts, get peer review, and leave with portfolio pieces — not just certificates.</p>
+          </div>
+          <div class="step">
+            <span class="step-num">04</span>
+            <h3>Join the studio orbit</h3>
+            <p>Learn beside a working agency. Client briefs and demo guests come from the Sunkova network.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="proof">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div class="eyebrow"><span class="micro">Social proof</span><span class="rule"></span><span class="mono">06</span></div>
+          <h2 class="section-title">What learners aim for.</h2>
+          <p class="lead">Sample placeholders — not real testimonials. Replace with alumni quotes when cohorts launch.</p>
+        </div>
+        <div class="proof-grid" data-reveal-stagger>
+          <article class="proof-card">
+            <span class="sample-tag">Sample · Placeholder</span>
+            <p class="quote">“I didn't want another certificate. I wanted a case study I could put in front of a hiring manager.”</p>
+            <div class="who"><strong>Learner archetype</strong><span>Career switcher · AI Design</span></div>
+          </article>
+          <article class="proof-card">
+            <span class="sample-tag">Sample · Placeholder</span>
+            <p class="quote">“The M-Pesa module made the app feel real. Shipping to TestFlight was the unlock.”</p>
+            <div class="who"><strong>Learner archetype</strong><span>Beginner builder · Mobile</span></div>
+          </article>
+          <article class="proof-card">
+            <span class="sample-tag">Sample · Placeholder</span>
+            <p class="quote">“Threat modelling sounded abstract until we red-teamed a lab chatbot and wrote the report.”</p>
+            <div class="who"><strong>Learner archetype</strong><span>Working developer · AI Security</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="cta-band cta-band-media" data-reveal>
+          <div class="cta-band-bg"><img src="assets/images/editorial-neon.webp" alt="" loading="lazy" /></div>
+          <div class="cta-band-content">
+            <span class="micro micro-light">Enrol / Apply</span>
+            <h2>Ready to build <span class="serif" style="font-family:var(--font-serif);font-style:italic">in public?</span></h2>
+            <p class="lead" style="max-width:36rem">Tell us which courses interest you — we'll reply from hello@sunkova.com.</p>
+            <div class="actions">
+              <a class="btn btn-solid" href="contact.html">Join waitlist</a>
+              <a class="btn" href="https://sunkova.com" target="_blank" rel="noopener">Visit Sunkova studio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
