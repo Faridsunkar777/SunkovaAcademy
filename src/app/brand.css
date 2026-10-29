@@ -1,0 +1,713 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap");
+
+/* Sunkova Academy — a distinct editorial identity built from the original static site.
+   Motion is enhancement, never a prerequisite for reading or navigating. */
+:root {
+    --font-sans:
+        "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --brand-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+    --brand-purple: #b5a6ff;
+    --brand-paper: #f5f4f2;
+    --brand-black: #09090c;
+}
+.brand-motion-root {
+    overflow: clip;
+}
+.brand-container {
+    width: min(1376px, calc(100% - 112px));
+    margin-inline: auto;
+}
+.brand-cover {
+    object-fit: cover;
+}
+.brand-kicker,
+.brand-section-index,
+.brand-hero-bottom,
+.brand-story-media-counter,
+.brand-story-media-foot,
+.brand-story-step-line,
+.brand-program-kicker,
+.brand-programs-foot,
+.brand-proof-index,
+.brand-manifesto-meta,
+.brand-statement-index,
+.brand-ticker,
+.brand-closing .brand-kicker {
+    font-family: var(--brand-mono);
+    letter-spacing: 0.14em;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.6;
+}
+.brand-kicker {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    text-transform: uppercase;
+    color: #6e6a7b;
+}
+.brand-kicker-light {
+    color: #c7c3d0;
+}
+.brand-kicker-rule {
+    display: inline-block;
+    width: 42px;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.5;
+}
+.brand-small-square {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #d7c0ef;
+    border-radius: 1px;
+}
+.brand-section-index {
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 18px;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+.brand-section-index span:nth-child(2) {
+    opacity: 0.65;
+}
+.brand-inline-link,
+.brand-programs-foot a {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 13px;
+    font-weight: 550;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 8px;
+    transition: gap 0.25s ease;
+}
+.brand-inline-link:hover,
+.brand-programs-foot a:hover {
+    gap: 24px;
+}
+
+/* Site footer — quiet agency-style index */
+.footer {
+    background: #08080b;
+    color: #ecebf0;
+}
+.footer .footer-top {
+    border-bottom-color: #36363d;
+}
+.footer .footer-top h2 {
+    font-weight: 440;
+    letter-spacing: -0.07em;
+}
+.footer .footer-top p,
+.footer-menu a,
+.footer-bottom,
+.footer .eyebrow {
+    color: #aaa8b3;
+}
+.footer .footer-menu a:hover {
+    color: #fff;
+}
+.footer .footer-bottom {
+    border-top-color: #35353a;
+}
+.footer .pill-button.light {
+    background: #f3f1f4;
+}
+
+/* Internal pages share the brand typography and measured surfaces. */
+.interior-hero,
+.category-hero,
+.contact-section,
+.about-feature {
+    letter-spacing: -0.02em;
+}
+.interior-hero h1,
+.category-hero h1,
+.learner-page-head h1 {
+    font-weight: 450;
+    letter-spacing: -0.075em;
+}
+.course-list-row,
+.category-course-card,
+.benefit-card,
+.contact-form,
+.learner-course-card {
+    border-radius: 15px;
+}
+.course-list-row {
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+.course-list-row:hover {
+    transform: translateX(5px);
+}
+
+@media (max-width: 1150px) {
+    .brand-container {
+        width: min(1376px, calc(100% - 72px));
+    }
+    .brand-hero-layout {
+        grid-template-columns: 55% 45%;
+        min-height: 650px;
+    }
+    .brand-hero-copy h1 {
+        font-size: clamp(67px, 7.8vw, 94px);
+    }
+    .brand-hero-stage {
+        height: 480px;
+        margin-left: -6vw;
+    }
+    .brand-hero-stats {
+        right: -4%;
+        width: 216px;
+        padding: 17px;
+    }
+    .brand-hero-stats-grid strong {
+        font-size: 21px;
+    }
+    .brand-proof-grid {
+        grid-template-columns: 1.1fr 1fr;
+    }
+    .brand-proof-card-plain {
+        grid-column: 1 / -1;
+        min-height: 340px;
+    }
+    .brand-proof-card-plain .brand-proof-number {
+        position: absolute;
+        top: 35px;
+        right: 60px;
+    }
+    .brand-proof-card-plain > div:last-child {
+        margin-top: auto;
+    }
+    
+}
+@media (max-width: 850px) {
+    .brand-container {
+        width: calc(100% - 48px);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .brand-hero {
+        min-height: 0;
+        padding-top: 135px;
+    }
+    .brand-hero-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        min-height: 0;
+        padding-bottom: 40px;
+    }
+    .brand-hero-copy h1 {
+        font-size: clamp(70px, 12vw, 105px);
+        margin: 22px 0 28px;
+    }
+    .brand-hero-copy > p {
+        font-size: 16px;
+        max-width: 480px;
+        margin-bottom: 28px;
+    }
+    .brand-hero-stage {
+        width: 100%;
+        margin: 10px auto 25px;
+        height: 510px;
+    }
+    .brand-hero-art-main {
+        inset: 16% 10% 12% 13%;
+    }
+    .brand-hero-art-device {
+        left: 0;
+    }
+    .brand-hero-art-vr {
+        right: 2%;
+    }
+    .brand-hero-stats {
+        right: 0;
+        bottom: -1%;
+    }
+    .brand-story-grid {
+        display: flex;
+        flex-direction: column;
+    }
+    .brand-story-intro-grid {
+        grid-template-columns: 1fr;
+        margin-bottom: 55px;
+        gap: 22px;
+    }
+    .brand-story-media {
+        display: none;
+    }
+    .brand-story-steps {
+        padding: 0;
+        width: 100%;
+    }
+    .brand-story-step,
+    .brand-story-step.is-active {
+        min-height: 0;
+        opacity: 1;
+        padding: 30px 0 55px;
+    }
+    .brand-story-step h3 {
+        font-size: clamp(45px, 8vw, 70px);
+        max-width: 500px;
+    }
+    .brand-story-mobile-media {
+        position: relative;
+        display: block;
+        height: clamp(280px, 50vw, 500px);
+        width: 100%;
+        overflow: hidden;
+        border-radius: 14px;
+        margin-top: 20px;
+    }
+    .brand-story-progress {
+        display: none;
+    }
+    .brand-program-card,
+    .brand-program-card:nth-child(-n + 2) {
+        grid-column: span 3;
+        min-height: 500px;
+    }
+    .brand-program-card:last-child {
+        grid-column: 1 / -1;
+        min-height: 450px;
+    }
+    .brand-visual-statement {
+        min-height: 650px;
+    }
+    .brand-proof-heading {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+    .brand-manifesto-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+    .brand-manifesto-aside {
+        max-width: 410px;
+    }
+    .brand-manifesto h2 {
+        font-size: clamp(50px, 8vw, 76px);
+    }
+    .brand-closing-bottom {
+        align-items: start;
+        flex-direction: column;
+    }
+    .brand-statement-index {
+        left: 24px;
+    }
+}
+@media (max-width: 600px) {
+    .brand-container {
+        width: calc(100% - 36px);
+    }
+    
+    
+    .nav-actions {
+        gap: 6px;
+    }
+    
+    .brand-hero {
+        padding-top: 125px;
+    }
+    .brand-kicker-rule {
+        width: 20px;
+    }
+    .brand-hero-copy h1 {
+        font-size: clamp(59px, 13.1vw, 85px);
+        margin: 27px 0 24px;
+    }
+    .brand-hero-copy > p {
+        font-size: 14px;
+    }
+    .brand-hero-actions {
+        gap: 18px;
+    }
+    .brand-cta-icon {
+        height: 49px;
+        width: 49px;
+    }
+    .brand-primary-cta {
+        font-size: 12px;
+        gap: 11px;
+    }
+    .brand-secondary-cta {
+        padding: 13px 17px;
+        gap: 10px;
+        font-size: 11px;
+    }
+    .brand-hero-stage {
+        height: 340px;
+        margin: 36px 0 20px;
+    }
+    .brand-hero-art-main {
+        inset: 8% 8% 8% 12%;
+    }
+    .brand-hero-art-device {
+        width: 34%;
+        height: 45%;
+        border-width: 4px;
+        bottom: 3%;
+    }
+    .brand-hero-art-vr {
+        width: 34%;
+        height: 31%;
+        border-width: 4px;
+        top: 0;
+    }
+    .brand-hero-stats {
+        width: 155px;
+        padding: 11px;
+        bottom: -4%;
+        border-radius: 10px;
+    }
+    .brand-hero-stats-top {
+        font-size: 6px;
+        gap: 4px;
+    }
+    .brand-hero-stats-rule {
+        margin: 9px 0;
+    }
+    .brand-hero-stats-grid {
+        gap: 9px 6px;
+    }
+    .brand-hero-stats-grid strong {
+        font-size: 17px;
+    }
+    .brand-hero-stats-grid span {
+        font-size: 6px;
+        letter-spacing: 0.02em;
+    }
+    .brand-hero-stats p {
+        font-size: 8px;
+        margin-top: 8px;
+        padding-top: 8px;
+    }
+    .brand-hero-bottom {
+        min-height: 70px;
+        gap: 17px;
+    }
+    .brand-hero-bottom > div {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 2px;
+    }
+    .brand-hero-bottom > a {
+        white-space: nowrap;
+    }
+    .brand-ticker {
+        padding: 12px 0;
+    }
+    .brand-manifesto {
+        padding: 85px 0;
+    }
+    .brand-manifesto-layout {
+        padding: 45px 0 70px;
+        gap: 18px;
+    }
+    .brand-manifesto h2 {
+        font-size: clamp(43px, 10vw, 60px);
+    }
+    .brand-manifesto-layout > div p {
+        font-size: 15px;
+    }
+    .brand-story {
+        padding: 90px 0;
+    }
+    .brand-story-intro h2 {
+        font-size: clamp(56px, 12vw, 83px);
+    }
+    .brand-story-intro-grid > p {
+        font-size: 15px;
+    }
+    .brand-story-step h3 {
+        font-size: 47px;
+    }
+    .brand-story-step p {
+        font-size: 14px;
+    }
+    .brand-programs {
+        padding: 85px 0;
+    }
+    .brand-programs-header {
+        display: block;
+        padding: 36px 0;
+    }
+    .brand-programs-header h2 {
+        font-size: 75px;
+    }
+    .brand-programs-header p {
+        font-size: 14px;
+    }
+    .brand-programs-header .brand-inline-link {
+        margin-top: 23px;
+    }
+    .brand-program-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+    .brand-program-card,
+    .brand-program-card:nth-child(-n + 2),
+    .brand-program-card:last-child {
+        grid-column: 1;
+        min-height: 455px;
+    }
+    .brand-program-card-content {
+        padding: 22px;
+    }
+    .brand-program-card h3 {
+        font-size: 43px;
+    }
+    .brand-program-card p {
+        font-size: 13px;
+    }
+    .brand-programs-foot {
+        align-items: flex-start;
+        flex-direction: column;
+        font-size: 9px;
+    }
+    .brand-visual-statement {
+        min-height: 580px;
+    }
+    .brand-statement-content {
+        padding: 110px 0;
+    }
+    .brand-statement-content h2 {
+        font-size: clamp(56px, 12vw, 76px);
+    }
+    .brand-proof {
+        padding: 90px 0;
+    }
+    .brand-proof-heading {
+        padding: 35px 0 45px;
+    }
+    .brand-proof-heading h2 {
+        font-size: 76px;
+    }
+    .brand-proof-heading p {
+        font-size: 15px;
+    }
+    .brand-proof-grid {
+        grid-template-columns: 1fr;
+    }
+    .brand-proof-card,
+    .brand-proof-card-plain {
+        grid-column: 1;
+        min-height: 410px;
+        padding: 25px;
+    }
+    .brand-proof-card-visual .brand-proof-card-image {
+        margin: -25px -25px 25px;
+    }
+    .brand-proof-card-plain .brand-proof-number {
+        position: static;
+    }
+    .brand-proof-graphic {
+        width: 270px;
+        height: 270px;
+    }
+    .brand-closing {
+        padding: 95px 0 125px;
+    }
+    .brand-closing h2 {
+        font-size: clamp(55px, 12vw, 85px);
+        margin: 45px 0 60px;
+    }
+    .brand-closing-bottom > div {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 22px;
+        width: 100%;
+    }
+    .brand-closing-cta {
+        min-width: 0;
+        width: 100%;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .brand-ticker-track {
+        animation: none;
+    }
+    .brand-story-image,
+    .brand-program-image,
+    .brand-program-card,
+    .brand-program-arrow,
+    .brand-cta-icon {
+        transition: none !important;
+    }
+    html {
+        scroll-behavior: auto;
+    }
+}
+/* Supporting routes: same restraint and art direction, not a separate template aesthetic. */
+.interior-hero {
+    background: #101016;
+    color: #f7f6f8;
+    min-height: 650px;
+    padding-top: 210px;
+    padding-bottom: 90px;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+.interior-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(
+        ellipse 45% 80% at 82% 70%,
+        rgba(68, 55, 119, 0.48),
+        transparent 80%
+    );
+}
+.interior-hero .eyebrow,
+.interior-hero-bottom,
+.contact-hero-description {
+    color: #c0bdcc;
+}
+.interior-hero h1 {
+    letter-spacing: -0.087em;
+    font-weight: 450;
+}
+.interior-hero h1 em {
+    color: #d6c9ff;
+}
+.interior-hero-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.interior-hero-bottom p {
+    color: #c4c3ce;
+}
+.catalog-section {
+    background: var(--bg);
+    padding-top: 95px;
+}
+.filter-bar {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 24px 0;
+}
+.filter-label,
+.course-results-head,
+.course-detail {
+    font-family: var(--brand-mono);
+    letter-spacing: 0.08em;
+}
+.filter-buttons button {
+    border: 1px solid var(--line);
+    border-radius: 50px;
+    transition:
+        background 0.2s,
+        color 0.2s;
+}
+.filter-buttons button.selected {
+    background: var(--ink);
+    color: var(--bg);
+}
+.course-list-row {
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+    padding-top: 33px;
+    padding-bottom: 33px;
+}
+.course-list-row img {
+    border-radius: 12px;
+}
+.course-list-row h3 {
+    font-weight: 500;
+    letter-spacing: -0.045em;
+}
+.category-hero {
+    background: #e9e8ed;
+    color: #111118;
+}
+.category-hero-grid h1 {
+    font-weight: 450;
+    letter-spacing: -0.084em;
+}
+.category-hero-image {
+    border-radius: 13px;
+}
+.category-description {
+    background: var(--bg);
+}
+.category-description h2 {
+    font-weight: 450;
+    letter-spacing: -0.06em;
+}
+.category-courses {
+    background: var(--bg);
+}
+.category-course-card {
+    border: 1px solid var(--line);
+    overflow: hidden;
+}
+.category-course-content h3 {
+    font-weight: 500;
+}
+.category-outro,
+.about-close {
+    background: #17151f;
+}
+.about-feature {
+    background: var(--bg);
+}
+.about-feature-media {
+    border-radius: 14px;
+    overflow: hidden;
+}
+.about-feature-content h2 {
+    letter-spacing: -0.07em;
+    font-weight: 450;
+}
+.principles {
+    background: #ebeaed;
+    color: #16161b;
+}
+.principle-grid article {
+    background: #f9f9fb;
+    border-radius: 14px;
+}
+.contact-section {
+    background: var(--bg);
+}
+.contact-form {
+    border: 1px solid var(--line);
+    background: var(--surface);
+}
+.contact-aside-image {
+    border-radius: 14px;
+    overflow: hidden;
+}
+@media (max-width: 850px) {
+    .interior-hero {
+        padding-top: 170px;
+    }
+}
+@media (max-width: 600px) {
+    .interior-hero {
+        min-height: 0;
+        padding-top: 155px;
+        padding-bottom: 65px;
+    }
+    .catalog-section {
+        padding-top: 55px;
+    }
+}

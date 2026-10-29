@@ -1,0 +1,26 @@
+/* Tailwind v4 incremental integration. Deliberately omit Preflight:
+   legacy global/brand styles remain intact as pages migrate section by section. */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme inline {
+  --color-academy-bg: var(--bg);
+  --color-academy-surface: var(--surface);
+  --color-academy-text: var(--ink);
+  --color-academy-muted: var(--muted);
+  --color-academy-accent: var(--accent);
+  --font-academy: var(--font-sans);
+  --font-academy-mono: var(--brand-mono);
+}
+
+/* Theme selectors match the existing ThemeProvider's html[data-theme] state. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* The only new CSS beyond Tailwind utilities is the marquee keyframe. */
+@theme {
+  --animate-academy-marquee: academy-marquee 45s linear infinite;
+  @keyframes academy-marquee {
+    to { transform: translateX(-50%); }
+  }
+}

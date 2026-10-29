@@ -1,0 +1,236 @@
+{
+  "categories": [
+    {
+      "slug": "ai-design",
+      "title": "AI Design",
+      "headline": "Design the next generation of intelligent experiences.",
+      "description": "Human-first interfaces for an AI-first world.",
+      "tagline": "Design for trust and clarity.",
+      "duration": "8 weeks",
+      "image": "/assets/images/track-ai-design.webp",
+      "number": "01"
+    },
+    {
+      "slug": "mobile-applications",
+      "title": "Mobile Applications",
+      "headline": "Build for the phones people actually use.",
+      "description": "From your first prototype to a production-ready app.",
+      "tagline": "Built for the real world.",
+      "duration": "12 weeks",
+      "image": "/assets/images/track-mobile.webp",
+      "number": "02"
+    },
+    {
+      "slug": "ai-security",
+      "title": "AI Security",
+      "headline": "Secure what the future runs on.",
+      "description": "Threat-model, test, and responsibly strengthen AI products.",
+      "tagline": "Build with confidence.",
+      "duration": "8 weeks",
+      "image": "/assets/images/track-ai-security.webp",
+      "number": "03"
+    },
+    {
+      "slug": "ai-engineering",
+      "title": "AI Engineering",
+      "headline": "Turn AI ideas into useful systems.",
+      "description": "Build assistants, retrieval workflows, and agents that solve real problems.",
+      "tagline": "From prompts to products.",
+      "duration": "6 weeks",
+      "image": "/assets/images/track-ai-engineering.webp",
+      "number": "04"
+    },
+    {
+      "slug": "3d-animation",
+      "title": "3-D Animation",
+      "headline": "Bring digital experiences to life.",
+      "description": "Storytelling through motion, 3D, and immersive experiences.",
+      "tagline": "Make the impossible feel real.",
+      "duration": "8 weeks",
+      "image": "/assets/images/track-3d-animation.webp",
+      "number": "05"
+    }
+  ],
+  "courses": [
+    {
+      "id": "ai-design-1",
+      "slug": "ai-product-design-foundations",
+      "categorySlug": "ai-design",
+      "category": "AI Design",
+      "title": "AI Product Design Foundations",
+      "description": "Design for probabilistic systems — research, opportunity framing, and trust UX for East African users.",
+      "format": "Live cohort",
+      "details": "8 weeks · Beginner",
+      "price": "Pricing TBD",
+      "image": "/assets/images/course-ai-product.webp"
+    },
+    {
+      "id": "ai-design-2",
+      "slug": "conversational-agentic-ux",
+      "categorySlug": "ai-design",
+      "category": "AI Design",
+      "title": "Conversational & Agentic UX",
+      "description": "Prototype WhatsApp-first agents with failure states, handoffs, and multilingual flows.",
+      "format": "Self-paced",
+      "details": "6 weeks · Beginner",
+      "price": "Pricing TBD",
+      "image": "/assets/images/course-conversational.webp"
+    },
+    {
+      "id": "ai-design-3",
+      "slug": "designing-for-probabilistic-systems",
+      "categorySlug": "ai-design",
+      "category": "AI Design",
+      "title": "Designing for Probabilistic Systems",
+      "description": "Teardown AI products against PAIR and HAX guidelines, then redesign for clarity and recovery.",
+      "format": "Self-paced",
+      "details": "4 weeks · Beginner",
+      "price": "Pricing TBD",
+      "image": "/assets/images/course-agentic.webp"
+    },
+    {
+      "id": "mobile-applications-1",
+      "slug": "flutter-foundations-hello-mtaa",
+      "categorySlug": "mobile-applications",
+      "category": "Mobile Applications",
+      "title": "Flutter Foundations: Hello Mtaa",
+      "description": "Ship your first multi-screen Flutter app tuned for low-end Android and Kenyan user contexts.",
+      "format": "Live cohort",
+      "details": "6 weeks · Beginner",
+      "price": "Pricing TBD",
+      "image": "/assets/images/course-flutter.webp"
+    },
+    {
+      "id": "mobile-applications-2",
+      "slug": "mobile-apps-with-m-pesa",
+      "categorySlug": "mobile-applications",
+      "category": "Mobile Applications",
+      "title": "Mobile Apps with M-Pesa",
+      "description": "Add Daraja STK Push, auth, and offline-first data to a booking-style service app.",
+      "format": "Live cohort",
+      "details": "8 weeks · Beginner+",
+      "price": "Pricing TBD",
+      "image": "/assets/images/course-mpesa.webp"
+    },
+    {
+      "id": "mobile-applications-3",
+      "slug": "ai-powered-mobile-features",
+      "categorySlug": "mobile-applications",
+      "category": "Mobile Applications",
+      "title": "AI-Powered Mobile Features",
+      "description": "Integrate responsible on-device and API AI features into a publishable Flutter app.",
+      "format": "Self-paced",
+      "details": "5 weeks · Beginner+",
+      "price": "Pricing TBD",
+      "image": "/assets/images/hero-device.webp"
+    },
+    {
+      "id": "ai-security-1",
+      "slug": "ai-threat-modelling-essentials",
+      "categorySlug": "ai-security",
+      "category": "AI Security",
+      "title": "AI Threat Modelling Essentials",
+      "description": "Map LLM apps with OWASP LLM Top 10 and MITRE ATLAS — threat models you can present to leadership.",
+      "format": "Self-paced",
+      "details": "4 weeks · Beginner",
+      "price": "Pricing TBD",
+      "image": "/assets/images/course-threat.webp"
+    },
+    {
+      "id": "ai-security-2",
+      "slug": "prompt-injection-red-teaming",
+      "categorySlug": "ai-security",
+      "category": "AI Security",
+      "title": "Prompt Injection & Red Teaming",
+      "description": "Lab-only attacks and defences: injection, jailbreaks, and professional findings reports.",
+      "format": "Live cohort",
+      "details": "6 weeks · Beginner+",
+      "price": "Pricing TBD",
+      "image": "/assets/images/course-redteam.webp"
+    },
+    {
+      "id": "ai-security-3",
+      "slug": "secure-the-launch",
+      "categorySlug": "ai-security",
+      "category": "AI Security",
+      "title": "Secure the Launch",
+      "description": "Threat-model, red-team, and harden an authorised AI app with guardrails and incident playbooks.",
+      "format": "Live cohort",
+      "details": "8 weeks · Beginner+",
+      "price": "Pricing TBD",
+      "image": "/assets/images/track-ai-security.webp"
+    },
+    {
+      "id": "ai-engineering-1",
+      "slug": "prompt-engineering-essentials",
+      "categorySlug": "ai-engineering",
+      "category": "AI Engineering",
+      "title": "Prompt Engineering Essentials",
+      "description": "Structured prompts, evaluation, multimodal workflows — no coding required to start shipping AI assistants.",
+      "format": "Live cohort",
+      "details": "6 weeks · Beginner",
+      "price": "Pricing TBD",
+      "image": "/assets/images/course-prompt.webp"
+    },
+    {
+      "id": "ai-engineering-2",
+      "slug": "grounded-assistants-rag-basics",
+      "categorySlug": "ai-engineering",
+      "category": "AI Engineering",
+      "title": "Grounded Assistants & RAG Basics",
+      "description": "Build no-code → light-code knowledge assistants over real docs with citations, refusals, and eval logs.",
+      "format": "Self-paced",
+      "details": "6 weeks · Beginner+",
+      "price": "Pricing TBD",
+      "image": "/assets/images/course-rag.webp"
+    },
+    {
+      "id": "ai-engineering-3",
+      "slug": "agents-automation",
+      "categorySlug": "ai-engineering",
+      "category": "AI Engineering",
+      "title": "Agents & Automation",
+      "description": "Chain prompts into human-approved automations with n8n/Make and responsible data handling.",
+      "format": "Self-paced",
+      "details": "5 weeks · Beginner+",
+      "price": "Pricing TBD",
+      "image": "/assets/images/bento-abstract.webp"
+    },
+    {
+      "id": "3d-animation-1",
+      "slug": "motion-fundamentals-for-builders",
+      "categorySlug": "3d-animation",
+      "category": "3-D Animation",
+      "title": "Motion Fundamentals for Builders",
+      "description": "Cinematic timing, hierarchy, and storytelling — animate interfaces and short brand films.",
+      "format": "Live cohort",
+      "details": "6 weeks · Beginner",
+      "price": "Pricing TBD",
+      "image": "/assets/images/course-motion.webp"
+    },
+    {
+      "id": "3d-animation-2",
+      "slug": "3d-content-pipeline",
+      "categorySlug": "3d-animation",
+      "category": "3-D Animation",
+      "title": "3D Content Pipeline",
+      "description": "Model-to-engine workflow with USDZ/glTF, lighting, and optimisation for realtime experiences.",
+      "format": "Live cohort",
+      "details": "8 weeks · Beginner",
+      "price": "Pricing TBD",
+      "image": "/assets/images/course-blender.webp"
+    },
+    {
+      "id": "3d-animation-3",
+      "slug": "spatial-immersive-experiences",
+      "categorySlug": "3d-animation",
+      "category": "3-D Animation",
+      "title": "Spatial & Immersive Experiences",
+      "description": "Compose interactive 3D scenes for web and spatial prototypes — portfolio demo film included.",
+      "format": "Live cohort",
+      "details": "10 weeks · Beginner+",
+      "price": "Pricing TBD",
+      "image": "/assets/images/bento-headset.webp"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync,existsSync} from 'node:fs';
+import {join} from 'node:path';
+const root=process.cwd();const catalog=JSON.parse(readFileSync(join(root,'src/data/catalog.json'),'utf8'));
+const learn=JSON.parse(readFileSync(join(root,'src/data/learning.json'),'utf8'));
+test('five categories and fifteen public-facing courses migrated',()=>{assert.equal(catalog.categories.length,5);assert.equal(catalog.courses.length,15);assert.equal(new Set(catalog.categories.map(c=>c.slug)).size,5);assert.equal(new Set(catalog.courses.map(c=>c.slug)).size,15)});
+test('catalogue category references remain valid',()=>{const slugs=new Set(catalog.categories.map(c=>c.slug));for(const c of catalog.courses) assert.ok(slugs.has(c.categorySlug),c.title)});
+test('all public imagery exists',()=>{for(const c of [...catalog.categories,...catalog.courses,...learn.catalogue,...Object.values(learn.courses)])assert.ok(existsSync(join(root,'public',c.image.replace(/^\//,''))),c.title)});
+test('five rich curriculum courses and 30 modules retained',()=>{assert.equal(Object.keys(learn.courses).length,5);assert.equal(Object.values(learn.courses).reduce((total,c)=>total+c.modules.length,0),30);for(const c of Object.values(learn.courses)){assert.ok(c.modules.every(m=>m.id&&m.title));assert.ok(c.modules.every(m=>m.content?.notes||m.status==='coming-soon'))}});
+test('each LMS module has a generated static route via source',()=>{const s=readFileSync(join(root,'src/app/learn/course/[slug]/module/[moduleId]/page.tsx'),'utf8');assert.match(s,/generateStaticParams/)});
+test('Cloudflare legacy route redirects exist',()=>{const data=readFileSync(join(root,'public/_redirects'),'utf8');for(const target of ['/courses.html','/about.html','/learn/course.html','/learn/module.html'])assert.ok(data.includes(target),target)});

@@ -1,54 +1,80 @@
-# Sunkova Academy — static marketing site
+# Sunkova Academy — Lesson module refactor
 
-Sibling brand site for **Sunkova Academy** (education arm of [sunkova.com](https://sunkova.com)). Cinematic product UI with dark + light themes, premium frosted nav, Academy brand lockup, challenge-based course IA, live + self-paced formats.
+This archive replaces the **legacy 680-line `src/components/module-client.tsx`** with a modular Tailwind v4 lesson interface under `src/components/learn/module/`.
 
-## Preview locally
+## Installation
 
-From this folder:
+1. Back up your current working tree / commit the active feature branch.
+2. Download the ZIP into `~/Downloads` and extract into the repository root:
 
-```bash
-cd /workspace/sunkova-academy
-python3 -m http.server 8080
+   ```bash
+   cd ~/Work/SunkovaAcademy
+   git status --short
+   unzip -o ~/Downloads/SunkovaAcademy-module-refactor.zip -d .
+   ```
+
+3. Validate using your project's installed dependencies:
+
+   ```bash
+   npm run typecheck
+   npm run lint
+   npm run build
+   npm run dev
+   ```
+
+4. Check `/learn/course/ai-product-design-foundations/module/01/` and a capstone URL, plus mobile and both color themes.
+
+## Files
+
+```text
+src/components/
+  module-client.tsx                    # backwards-compatible re-export
+  learn/
+    module-theme.tsx                  # route adapter; no legacy CSS selectors
+    module/
+      module-client.tsx               # progression/drafts controller
+      module-header.tsx               # page heading and breadcrumbs
+      module-sidebar.tsx              # sticky progress + section navigation
+      lesson-intro.tsx                # essential question and objectives
+      lesson-step.tsx                 # current step and prev/next controls
+      submission-form.tsx             # browser-local submission form
+      module-rubric.tsx               # responsive rubric table
+      module-navigation.tsx           # adjacent modules/capstone links
+      capstone-view.tsx               # brief, milestones, rubric, submission
+      shared.tsx                      # Tailwind UI + Markdown rendering
+      steps/
+        watch-step.tsx                # learning resource links
+        learn-step.tsx                # notes/markdown
+        check-step.tsx                # expandable Q&A
+        challenge-step.tsx            # brief + local submission
+        reflection-step.tsx           # reflections
 ```
 
-Then open [http://localhost:8080](http://localhost:8080).
+## Compatibility and behavior
 
-Or open `index.html` directly in a browser (CDN scripts for Lenis/GSAP and Google Fonts need network).
+- Existing module route `src/app/learn/course/[slug]/module/[moduleId]/page.tsx` can remain unchanged. It already calls `LearnModuleTheme`.
+- `src/components/module-client.tsx` remains an export shim. Do not remove it if another route still imports it.
+- Existing progress helpers from `@/lib/progress`, content from `@/lib/learning` and the demo `LearnerShell` stay in place.
+- All five steps, question reveal counts, local progress reset, step completion, reflection drafts, challenge submissions, capstone completion and prev/next links are preserved.
+- Submission still stores only a URL, notes, and filename in **localStorage**. It does not upload files or authenticate users on a server.
+- The design uses the Sunkova Academy palette (#111115 / #F5F5F7 / #8B7BDB / #EAE6FB), responsive cards, fixed-width desktop sidebar and dark mode.
+- `module-rubric.tsx` is a Tailwind replacement for the older `.rubric` styling **within these module screens only**. Keep `src/components/rubric.tsx` until you have checked other imports.
+- No modifications to `globals.css` or `brand.css`; no new npm dependencies.
 
-## Pages
+## Manual regression checklist
 
-| File | Purpose |
-|------|---------|
-| `index.html` | Home — product hero, course categories, bento, formats, featured courses, method, CTA |
-| `courses.html` | Full catalogue with category filters (`?category=ai-design` etc.) |
-| `courses/*.html` | Five category detail pages with media heroes |
-| `about.html` | Mission for beginners / career switchers |
-| `contact.html` | Mailto demo form + `hello@sunkova.com` |
-| `learn/` | **Learner area (LMS shell v1)**: login, My courses, course, module pages. See `learn/README.md` |
-| `content/` | Drop zone for Jaylen's course markdown (`content/ai-design/…`) |
-| `css/main.css` | Shared design system |
-| `js/main.js` | Nav/footer inject, Lenis/GSAP, filters, form |
-| `assets/brand/` | Academy logos (PNG/SVG), favicon, apple-touch, previews |
-| `assets/logo.svg` | Hexagon-S mark (currentColor) |
-| `assets/images/*.webp` | Local Unsplash-sourced WebP imagery |
+- [ ] `/learn/login` -> module direct link respects the demo sign-in guard.
+- [ ] Mobile 375px/390px: no horizontal page scroll; sidebar steps stack above lesson content; forms work.
+- [ ] Desktop: sidebar stays sticky, right content remains scrollable.
+- [ ] Mark watch/learn/check, submit challenge, save reflections; progress and done states update.
+- [ ] Reload page: saved progress/submission/reflections remain.
+- [ ] Reset clears only this module's progress.
+- [ ] Quiz answer `<details>` open/close works; counts increase once per unique answer.
+- [ ] Capstone: milestones, rubric, local completion and navigation work.
+- [ ] Coming-soon modules are not accessible.
+- [ ] Dark mode: panel backgrounds and input/CTA contrast are readable.
+- [ ] No reduce-motion regressions.
 
-## Learn (LMS shell)
+## Validation status
 
-"Start learning" in the nav and footer goes to `learn/login.html`. From there the learner goes to My courses, then the course page, then the module page (Watch, Learn, Check, Challenge, Reflect), where they get a completion badge. Auth and progress are mocked in `localStorage`. The flow is in `learn/LEARNER_FLOW.md`.
-
-**Content pipeline.** Course markdown in `content/ai-design/` and `content/ai-engineering/` is parsed into `learn/data/<slug>.js` by `scripts/md_to_course_js.py`. The LMS catalogue uses **Category** (not Track) labels from that content.
-
-## Design notes
-
-- Palette and type cues aligned with sunkova.com: `#000` / `#1d1d1f`, `#f5f5f7` / `#d2d2d7`, accents `#0071e3` / `#f54900`
-- Full light + dark themes via `data-theme` CSS variables; preference in `localStorage` (`sunkova-academy-theme`), default from `prefers-color-scheme`
-- Theme toggle in the floating frosted-glass nav (sun/moon); logos swap per theme
-- Academy lockup in `assets/brand/`: hexagon-S + SUNKOVA + ACADEMY (divider + stacked variants, PNG + SVG)
-- Inter + Instrument Serif + IBM Plex Mono
-- Premium editorial layout: cinematic numbered category rows, studio bento, catalogue chapters — not dense SaaS card grids
-- Motion via Lenis + GSAP ScrollTrigger; respects `prefers-reduced-motion`
-- Imagery downloaded into `assets/images/` (WebP, typically under ~200KB each) — not hotlinked
-
-## Zip
-
-`sunkova-academy-full.zip` is the complete shippable site (marketing + learn + assets + content md). `sunkova-academy.zip` / slim zip omit heavy reference dumps and preview PNGs where noted.
+The 17 TSX files were parsed successfully using TypeScript's `transpileModule` API with **zero syntax diagnostics**. Full Next.js type checking, ESLint and integration checks must be run in your actual project after installation; they have not been claimed as complete here.
