@@ -19,7 +19,6 @@ export const metadata: Metadata = {
   description:
     "Challenge-based education in AI design, engineering, security, mobile development, and 3D. An education company from the Sunkova Studio in Nairobi.",
   icons: {
-    icon: "/assets/brand/favicon.svg",
     apple: "/assets/brand/apple-touch-icon.png",
   },
   openGraph: {
