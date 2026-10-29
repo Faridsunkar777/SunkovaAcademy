@@ -64,8 +64,8 @@ export function ContactDetails() {
         </div>
 
         <p className="mt-7 inline-flex items-start gap-2 font-academy-mono text-[10px] leading-[1.7] tracking-[0.05em] text-[#111115]/50 dark:text-[#F5F5F7]/55">
-          <MapPin size={15} className="mt-0.5 shrink-0 text-[#8B7BDB]" />
-          NAIROBI, KENYA. LEARNING WITHOUT BORDERS.
+          <MapPin size={15} className="mt-4 shrink-0 text-[#8B7BDB]" />
+          <span className="mt-4">NAIROBI, KENYA. LEARNING WITHOUT BORDERS.</span>
         </p>
       </div>
     </aside>
