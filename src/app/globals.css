@@ -868,3 +868,33 @@ em {
     font-weight: 700;
     min-width: 125px;
 }
+
+
+/* Sunkova Academy — Hero floating images */
+
+@keyframes hero-art-float {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  45% {
+    transform: translate3d(0, -9px, 0);
+  }
+
+  65% {
+    transform: translate3d(0, -5px, 0);
+  }
+}
+
+.hero-art-float {
+  animation: hero-art-float 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hero-art-float {
+    animation: none;
+    will-change: auto;
+  }
+}
