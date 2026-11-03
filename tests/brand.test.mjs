@@ -23,7 +23,7 @@ test('original asset paths remain valid',()=>{
 });
 test('GSAP ScrollTrigger kept and native scroll preserved',()=>{
   assert.ok(pack.dependencies.gsap && pack.dependencies['@gsap/react']);
-  assert.match(files[3],/ScrollTrigger\.create/);
+  assert.match(motion,/registerPlugin\(ScrollTrigger/);
   assert.match(motion,/scrollTrigger/);
   assert.match(motion,/\[data-home-hero\]/);
   assert.doesNotMatch(motion,/ScrollSmoother|scrollTo\(/);

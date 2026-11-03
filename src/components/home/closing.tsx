@@ -107,7 +107,7 @@ export function HomeClosing() {
                     rounded-full bg-[#8B7BDB]
                   "
                 />
-                ENROL / APPLY
+                START A CONVERSATION
               </div>
 
               {/* Headline */}
@@ -142,9 +142,7 @@ export function HomeClosing() {
                   sm:mt-6 sm:text-[16px]
                 "
               >
-                Tell us which courses interest you.
-                We&apos;ll help you find the right
-                learning path and take the next step.
+                Explore our focused courses or ask about the proposed six-month engineering residency. We&apos;ll help you identify a suitable next step.
               </p>
 
               {/* Actions */}

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowDown } from "lucide-react";
 import { categories, courses } from "@/lib/catalog";
 import { Container, CourseMarker } from "./shared";
@@ -15,8 +16,9 @@ export function CatalogueHero() {
               <span className="text-[#8B7BDB]">worth building.</span>
             </h1>
             <p className="mt-7 max-w-[500px] text-[15px] leading-[1.8] text-[#111115]/65 dark:text-[#F5F5F7]/65 sm:text-[17px]">
-              From first principles to ambitious projects. Explore practical learning paths designed to help you make your next move.
+              Shorter, focused learning paths across five disciplines. Looking for the six-month bridge from foundational skills to team delivery? Explore our separate residency concept.
             </p>
+            <Link href="/residency" className="mt-6 inline-flex items-center gap-2 text-[13px] font-medium text-[#6554A8] transition-colors hover:text-[#8B7BDB] dark:text-[#B6ABF1]">Explore the six-month residency <ArrowDown size={15} className="-rotate-90" /></Link>
             <a href="#course-catalogue" className="mt-9 inline-flex items-center gap-3 font-academy-mono text-[10px] tracking-[0.12em] text-[#111115]! transition-colors hover:text-[#8B7BDB]! dark:text-[#F5F5F7]! dark:hover:text-[#8B7BDB]!">
               SCROLL TO EXPLORE <ArrowDown size={15} />
             </a>

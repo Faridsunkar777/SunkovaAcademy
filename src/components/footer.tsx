@@ -136,9 +136,9 @@ export function Footer() {
                 dark:text-[#F5F5F7]/60
               "
             >
-              Challenge-based learning for career
-              switchers and beginners who want to
-              ship — not just study.
+              Practical courses and a proposed six-month
+              residency bridging foundational skills
+              and collaborative product delivery.
             </p>
           </div>
 
@@ -179,6 +179,9 @@ export function Footer() {
               <FooterHeading>ACADEMY</FooterHeading>
 
               <div className="flex flex-col items-start gap-3">
+                <Link href="/residency" className={footerLink}>
+                  Six-month residency
+                </Link>
                 <Link href="/about" className={footerLink}>
                   About
                 </Link>

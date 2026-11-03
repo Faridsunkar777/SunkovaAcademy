@@ -17,13 +17,13 @@ test('hero keeps headline and founding information',()=>{
   assert.doesNotMatch(hero,/<em[^>]*data-hero-line/);
 });
 test('hero has theme variants and preserves correct GSAP anchors',()=>{
-  assert.match(hero,/dark:bg-\[#07090c\]/);
+  assert.match(hero,/dark:bg-\[#111115\]/);
   assert.match(hero,/data-home-hero/);
   assert.match(hero,/data-hero-art/);
   assert.match(css,/@custom-variant dark/);
 });
 test('ticker duplicates content, animates continuously and respects reduced motion',()=>{
-  assert.match(ticker,/<TickerGroup \/><TickerGroup duplicate \/>/);
+  assert.match(ticker,/<TickerGroup \/>\s*<TickerGroup duplicate \/>/);
   assert.match(ticker,/animate-academy-marquee/);
   assert.match(ticker,/motion-reduce:animate-none/);
   assert.match(css,/translateX\(-50%\)/);

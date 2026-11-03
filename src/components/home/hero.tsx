@@ -203,9 +203,9 @@
 //           {/* Hero buttons */}
 //           <div className="mt-8 grid w-full grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-4">
 
-//             {/* Explore courses */}
+//             {/* Explore residency */}
 //             <Link
-//               href="/courses"
+//               href="/residency"
 //               className="
 //                 group
 //                 flex h-[52px] w-full min-w-0
@@ -256,9 +256,9 @@
 //               </span>
 //             </Link>
 
-//             {/* Apply / Enquire */}
+//             {/* Keep courses as a separate path */}
 //             <Link
-//               href="/contact?program=Academy%20enrolment"
+//               href="/courses"
 //               className="
 //                 group
 //                 flex h-[52px] w-full min-w-0
@@ -283,7 +283,7 @@
 //               "
 //             >
 //               <span className="whitespace-nowrap text-inherit">
-//                 Apply / enquire
+//                 Explore courses
 //               </span>
 
 //               <ArrowRight
@@ -533,9 +533,7 @@ export function HomeHero() {
           </h1>
 
           <p className="max-w-[430px] text-[15px] leading-[1.75] text-[#111115]/65 dark:text-[#F5F5F7]/70 sm:text-[17px] lg:text-[18px]">
-            Challenge-based education for people who want to
-            design, build and ship real work. Made by the
-            studio behind Sunkova.
+            Practical courses and a proposed six-month residency that bridges the gap between learning to code and contributing to real product teams.
           </p>
 
           {/* Hero buttons */}

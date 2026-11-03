@@ -41,7 +41,9 @@ export function ContactForm() {
       ? matchedCategory.title
       : requestedProgram.toLowerCase() === "academy enrolment"
         ? "Academy enrolment"
-        : "Specific course enquiry";
+        : requestedProgram.toLowerCase() === "six-month engineering residency"
+          ? "Six-month residency enquiry"
+          : "Specific course enquiry";
 
   const interest = editedInterest ?? initialInterest;
   const message =
@@ -131,6 +133,7 @@ export function ContactForm() {
             >
               <option value="General enquiry">General enquiry</option>
               <option value="Academy enrolment">Academy enrolment</option>
+              <option value="Six-month residency enquiry">Six-month residency enquiry</option>
               <option value="Specific course enquiry">Specific course enquiry</option>
               {categories.map((category) => (
                 <option key={category.slug} value={category.title}>

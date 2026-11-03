@@ -9,6 +9,7 @@ import { ArrowUpRight, Menu, Moon, Sun, X } from "./icons";
 import { useTheme } from "./theme-provider";
 
 const links = [
+  { href: "/residency", label: "Residency" },
   { href: "/courses", label: "Courses" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
@@ -153,12 +154,12 @@ export function Nav() {
             {dark ? <Sun size={17} /> : <Moon size={17} />}
           </button>
 
-          {/* Desktop Apply / Enrol */}
+          {/* Desktop Enquire */}
           <Link
             href="/contact?program=Academy%20enrolment"
             className={`group hidden shrink-0 items-center gap-2 whitespace-nowrap rounded-full px-4 py-2.5 text-[11px] font-semibold leading-none shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:scale-105 hover:ring-2 hover:ring-[#8B7BDB]/60 active:scale-95 motion-reduce:transform-none sm:inline-flex ${ctaSurface} ${focus}`}
           >
-            <span className={ctaText}>Apply / Enrol</span>
+            <span className={ctaText}>Enquire</span>
             <ArrowUpRight
               size={15}
               className={`shrink-0 ${ctaText}`}

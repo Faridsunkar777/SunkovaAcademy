@@ -242,9 +242,7 @@ export function HomePrograms() {
                 sm:text-[17px]
               "
             >
-              Five different disciplines.
-              One shared expectation: build
-              something real.
+              Five shorter learning disciplines, distinct from our proposed six-month residency. One shared expectation: build something real.
             </p>
           </div>
 
